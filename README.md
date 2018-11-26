@@ -3,3 +3,5 @@
 - [Connect](https://t.me/@GameCheckersBot "Connect bot") bot.
 - Open conversation where you want to start game.
 - Type "@GameCheckersBot " and them select "Send table".
+#### Last update
+  July 2018
