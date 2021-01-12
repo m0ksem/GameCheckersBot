@@ -9,10 +9,9 @@
     GameCheckersBot
   </a>
 </h1>
-
+  
 ![Node.js CI](https://github.com/m0ksem/GameCheckersBot/workflows/Node.js%20CI/badge.svg?branch=master)
-___
-
+ 
 - [How to use bot](https://teletype.in/@m0ksem/kpvQiJAMW)
 - Setup:
   - yarn
