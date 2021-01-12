@@ -1,0 +1,25 @@
+{
+  "name": "game-checkers-bot",
+  "version": "2.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "node ./src/index.js",
+    "start": "node ./src/index.js production",
+    "lint": "eslint --ext .js, ./src/"
+  },
+  "author": "m0ksem <m0ksem1337@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "eslint-config-airbnb-base": "^14.2.1",
+    "jest": "^25.1.0",
+    "mongodb": "^3.5.8",
+    "telegraf": "^3.36.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.3"
+  }
+}
