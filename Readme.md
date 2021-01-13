@@ -10,7 +10,13 @@
   </a>
 </h1>
   
-![Node.js CI](https://github.com/m0ksem/GameCheckersBot/workflows/Node.js%20CI/badge.svg?branch=master)
+  
+<p align="center">
+  <a href="">
+    <img src="https://github.com/m0ksem/GameCheckersBot/workflows/test%20and%20lint/badge.svg" alt="test">
+  </a>
+</p>
+
  
 - [How to use bot](https://teletype.in/@m0ksem/kpvQiJAMW)
 - Setup:
