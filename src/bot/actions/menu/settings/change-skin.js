@@ -1,5 +1,5 @@
 const Markup = require('telegraf/markup');
-const Action = require('../../../utils/action');
+const { action } = require('telegram-bot-action-handlers');
 
 const noAction = require('../../no-action');
 const sessionExpiredAction = require('../../session-expired');
@@ -15,7 +15,7 @@ function renderSkinListKeyboard(session) {
 
     return [Markup.callbackButton(
       title,
-      Action.stringify('menu/settings/change-skin', skin.name),
+      action('menu/settings/change-skin', skin.name),
     )];
   });
 

@@ -1,5 +1,5 @@
 const Markup = require('telegraf/markup');
-const Action = require('../../utils/action');
+const { action } = require('telegram-bot-action-handlers');
 
 function isGameSessionReadyToPlay(session) {
   return session.players.white.name && session.players.black.name;
@@ -13,14 +13,14 @@ module.exports = function startGameMenuKeyboard(session) {
 
   const buttons = [
     [
-      Markup.callbackButton(whiteName, Action.stringify('menu/select-color', 'white')),
-      Markup.callbackButton(blackName, Action.stringify('menu/select-color', 'black')),
+      Markup.callbackButton(whiteName, action('menu/select-color', 'white')),
+      Markup.callbackButton(blackName, action('menu/select-color', 'black')),
     ],
-    [Markup.callbackButton(buttonsText.settings, Action.stringify('menu/settings'))],
+    [Markup.callbackButton(buttonsText.settings, action('menu/settings'))],
   ];
 
   if (isGameSessionReadyToPlay(session)) {
-    buttons.push([Markup.callbackButton(buttonsText.play, Action.stringify('game/start'))]);
+    buttons.push([Markup.callbackButton(buttonsText.play, action('game/start'))]);
   }
 
   return Markup.inlineKeyboard(buttons);

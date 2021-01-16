@@ -1,5 +1,5 @@
 const Markup = require('telegraf/markup');
-const Action = require('../utils/action');
+const { action } = require('telegram-bot-action-handlers');
 const dictionary = require('../../dictionary');
 
 module.exports = (ctx) => {
@@ -15,7 +15,7 @@ module.exports = (ctx) => {
       reply_markup: Markup.inlineKeyboard([
         Markup.callbackButton(
           text.buttons.clickToStart,
-          Action.stringify('menu/start-game', 'new'),
+          action('menu/start-game', 'new'),
         ),
       ]),
     },

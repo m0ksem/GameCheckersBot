@@ -1,5 +1,5 @@
 const Markup = require('telegraf/markup');
-const Action = require('../../utils/action');
+const { action } = require('telegram-bot-action-handlers');
 
 function renderBeatingRequiredTitle(session) {
   const beatIsRequiredHumanized = session.game.settings.beatIsRequired
@@ -10,9 +10,9 @@ function renderBeatingRequiredTitle(session) {
 
 module.exports = function startGameMenuKeyboard(session) {
   return Markup.inlineKeyboard([
-    [Markup.callbackButton(session.text.buttons.switchLang, Action.stringify('menu/settings/change-language'))],
-    [Markup.callbackButton(session.text.buttons.changeSkin, Action.stringify('menu/settings/change-skin'))],
-    [Markup.callbackButton(renderBeatingRequiredTitle(session), Action.stringify('menu/settings/beating'))],
-    [Markup.callbackButton(session.text.buttons.back, Action.stringify('menu/start-game'))],
+    [Markup.callbackButton(session.text.buttons.switchLang, action('menu/settings/change-language'))],
+    [Markup.callbackButton(session.text.buttons.changeSkin, action('menu/settings/change-skin'))],
+    [Markup.callbackButton(renderBeatingRequiredTitle(session), action('menu/settings/beating'))],
+    [Markup.callbackButton(session.text.buttons.back, action('menu/start-game'))],
   ]);
 };

@@ -1,5 +1,5 @@
 const Markup = require('telegraf/markup');
-const Action = require('../../utils/action');
+const { action } = require('telegram-bot-action-handlers');
 
 module.exports = (session, noAction) => {
   const inlineKeyboard = [];
@@ -8,7 +8,7 @@ module.exports = (session, noAction) => {
   for (let y = 0; y < 8; y += 1) {
     inlineKeyboard.push([]);
     for (let x = 0; x < 8; x += 1) {
-      const cbData = noAction ? Action.stringify('no-action') : Action.stringify('game/user-click', `${x}${y}`);
+      const cbData = noAction ? action('no-action') : action('game/user-click', `${x}${y}`);
       inlineKeyboard[y].push(Markup.callbackButton(keyboard[y][x], cbData));
     }
   }

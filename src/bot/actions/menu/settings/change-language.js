@@ -1,5 +1,5 @@
 const Markup = require('telegraf/markup');
-const Action = require('../../../utils/action');
+const { action } = require('telegram-bot-action-handlers');
 
 const noAction = require('../../no-action');
 const sessionExpiredAction = require('../../session-expired');
@@ -11,9 +11,9 @@ const dictionary = require('../../../../dictionary');
 function renderLanguagesListKeyboard(session) {
   const buttons = Object.values(dictionary.langs).map((lang) => {
     const title = session.lang === lang.langCode ? `✔ ${lang.langName}` : lang.langName;
-    const action = Action.stringify('menu/settings/change-language', lang.langCode);
+    const a = action('menu/settings/change-language', lang.langCode);
 
-    return [Markup.callbackButton(title, action)];
+    return [Markup.callbackButton(title, a)];
   });
 
   buttons.push([Markup.callbackButton(session.text.buttons.back, 'menu/settings')]);
