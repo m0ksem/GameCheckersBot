@@ -15,7 +15,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "jest": "^25.1.0",
     "mongodb": "^3.6.3",
-    "telegraf": "^3.36.0",
+    "telegraf": "^4.0.1",
     "telegram-bot-action-handlers": "ssh://git@github.com:m0ksem/telegram-bot-action-handlers.git#0.1"
   },
   "devDependencies": {
