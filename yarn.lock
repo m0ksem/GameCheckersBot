@@ -4010,10 +4010,10 @@ table@^6.0.4:
     slice-ansi "^4.0.0"
     string-width "^4.2.0"
 
-telegraf@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-4.0.1.tgz#58393c56ab29c19c7cdf2cce2bcdd39d24dd5974"
-  integrity sha512-kpl3vFDnIjlGxDuzNq3McUnJo9jGOlJEYtBeDPZc0Zvx878HFSO64uJeJ2HW6Tg3/76xh3dX77B7IdTGjuTOWA==
+telegraf@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-4.0.2.tgz#b15fde5f1f22757e9a9d226af50df172f1af1c3d"
+  integrity sha512-MTo8b6P/MMb6RbqDGXNWpCXESTihxRpTThOIPAfVBJohYQtywYl/vldjqUCdIYdg+ge8Sn/gk+OXfqHg4LewnA==
   dependencies:
     abort-controller "^3.0.0"
     debug "^4.3.1"
