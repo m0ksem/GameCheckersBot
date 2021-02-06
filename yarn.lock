@@ -4000,9 +4000,9 @@ telegraf@^3.38.0:
     sandwich-stream "^2.0.1"
     telegram-typings "^3.6.0"
 
-"telegram-bot-action-handlers@ssh://git@github.com:m0ksem/telegram-bot-action-handlers.git#0.1":
+"telegram-bot-action-handlers@git+https://github.com/m0ksem/telegram-bot-action-handlers.git#0.1":
   version "0.0.1"
-  resolved "ssh://git@github.com:m0ksem/telegram-bot-action-handlers.git#c01a87c49762b71348cfc139ad6949fb603da2c4"
+  resolved "git+https://github.com/m0ksem/telegram-bot-action-handlers.git#c01a87c49762b71348cfc139ad6949fb603da2c4"
 
 telegram-typings@^3.6.0:
   version "3.6.1"

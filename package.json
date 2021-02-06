@@ -16,7 +16,7 @@
     "jest": "^25.1.0",
     "mongodb": "^3.6.3",
     "telegraf": "^3.38.0",
-    "telegram-bot-action-handlers": "ssh://git@github.com:m0ksem/telegram-bot-action-handlers.git#0.1"
+    "telegram-bot-action-handlers": "git+https://github.com/m0ksem/telegram-bot-action-handlers.git#0.1"
   },
   "devDependencies": {
     "eslint": "^7.19.0",
