@@ -28,7 +28,7 @@ module.exports = {
 
   text(languageCode) {
     if (!Object.keys(this.langs).includes(languageCode)) {
-      return this.langs[this.DEFAULT_LANGUAGE_CODE];
+      return this.langs[DEFAULT_LANGUAGE_CODE];
     }
 
     return this.langs[languageCode];
