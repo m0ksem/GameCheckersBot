@@ -2,7 +2,7 @@ const noAction = require('../no-action');
 const sessionExpiredAction = require('../session-expired');
 const sessionsStorage = require('../../sessions-storage');
 const startGameMenuKeyboard = require('../../keyboards/menu/start-game');
-const username = require('../../utils/username');
+const username = require('../../../utils/username');
 const config = require('../../../config');
 
 const { allowSamePlayer } = config; // For development and testing

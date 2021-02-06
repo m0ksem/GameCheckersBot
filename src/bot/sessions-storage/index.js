@@ -1,5 +1,5 @@
 const GameSession = require('../../game-session');
-const mergeDeep = require('../utils/object-merge');
+const mergeDeep = require('../../utils/object-merge');
 const skins = require('../../skins');
 
 const sessionStorage = {
