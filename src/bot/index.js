@@ -10,7 +10,7 @@ const onExportToJson = require('./listeners/on-export-to-json');
 const onSaveToDatabase = require('./listeners/on-save-to-database');
 
 module.exports = class Bot {
-  constructor(telegraf) {
+  constructor(telegraf, onError) {
     this.bot = telegraf;
 
     const db = new DataBase(config.mongodb.url, config.mongodb.database);
@@ -29,6 +29,9 @@ module.exports = class Bot {
     this.bot.command('help', onHelpListener);
     this.bot.command('export_to_json', onExportToJson);
     this.bot.command('save_sessions_to_databases', (ctx) => onSaveToDatabase(ctx, db));
-    this.bot.catch((err) => console.error(err));
+
+    if (onError) {
+      this.bot.catch(onError)
+    }
   }
 };
