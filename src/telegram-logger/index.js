@@ -7,9 +7,9 @@ module.exports = class Logger {
     this.telegram = telegraf.telegram;
   }
 
-  log(text) { this.sendMessage(`[info]\n\n${text}`); }
+  log(text) { this.sendMessage(`[ℹ] Info\n\n${text}`); }
 
-  error(text) { this.sendMessage(`[error]\n\n${text}`); }
+  error(text) { this.sendMessage(`[🔥] Error\n\n${text}`); }
 
   sendMessage(text) { this.telegram.sendMessage(this.receiverId, text); }
 };

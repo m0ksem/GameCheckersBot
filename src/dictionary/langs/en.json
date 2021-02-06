@@ -30,7 +30,8 @@
     "sendNewTable": "Create new table",
     "sendNewTableToChat": "Send table to chat",
     "beatingRequired": "Beating required",
-    "donate": "Donate"
+    "donate": "Donate",
+    "addOwnLanguage": "Add own language"
   },
   "captions": {
     "sendTable": "Send table!",

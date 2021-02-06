@@ -1,7 +1,7 @@
 const fs = require('fs');
 const config = require('../../config');
 const sessionStorage = require('../sessions-storage');
-const sessionSerializer = require('../../serializers/game-session');
+const sessionSerializer = require('../../database/serializers/game-session');
 
 const FILE_PATH = './sessions.json';
 

@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
 
-const serializeSession = require('../serializers/game-session');
-const serializeUser = require('../serializers/user');
+const serializeSession = require('./serializers/game-session');
+const serializeUser = require('./serializers/user');
 
 class DataBase {
   constructor(clusterUrl, databaseName) {
