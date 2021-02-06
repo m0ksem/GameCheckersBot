@@ -18,7 +18,7 @@ function renderLanguagesListKeyboard(session) {
     return [Markup.callbackButton(title, a)];
   });
 
-  console.log(session.text.buttons.addOwnLanguage)
+  console.log(session.text.buttons.addOwnLanguage);
   buttons.push([Markup.urlButton(session.text.buttons.addOwnLanguage, NEW_LANGUAGE_REQUEST_URL)]);
   buttons.push([Markup.callbackButton(session.text.buttons.back, 'menu/settings')]);
   return Markup.inlineKeyboard(buttons);

@@ -18,7 +18,7 @@ function readLangs(folder, defaultLangCode) {
   const defaultLang = langsArray.find((lang) => lang.langCode === defaultLangCode);
   const langs = {};
 
-  langsArray.forEach((lang) => { langs[lang.langCode] = mergeDeep(lang, defaultLang) });
+  langsArray.forEach((lang) => { langs[lang.langCode] = mergeDeep(lang, defaultLang); });
 
   return langs;
 }

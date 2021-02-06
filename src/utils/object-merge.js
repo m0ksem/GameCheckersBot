@@ -27,8 +27,7 @@ function mergeDeep(target, ...sources) {
           });
         }
         mergeDeep(target[key], source[key]);
-      } else {
-        if (target[key]) { continue }
+      } else if (!target[key]) {
         Object.assign(target, {
           [key]: source[key],
         });
