@@ -7,7 +7,7 @@ const sessionExpiredAction = require('../../session-expired');
 const sessionsStorage = require('../../../sessions-storage');
 const dictionary = require('../../../../dictionary');
 
-const NEW_LANGUAGE_REQUEST_URL = 'https://github.com/m0ksem/GameCheckersBot/issues/new?labels=language-request&template=language_request.md'
+const NEW_LANGUAGE_REQUEST_URL = 'https://github.com/m0ksem/GameCheckersBot/issues/new?labels=language-request&template=language_request.md';
 
 /** @param {GameSession} session */
 function renderLanguagesListKeyboard(session) {
@@ -18,7 +18,7 @@ function renderLanguagesListKeyboard(session) {
     return [Markup.callbackButton(title, a)];
   });
 
-  buttons.push([Markup.urlButton(session.text.buttons.addOwnLanguage, NEW_LANGUAGE_REQUEST_URL)])
+  buttons.push([Markup.urlButton(session.text.buttons.addOwnLanguage, NEW_LANGUAGE_REQUEST_URL)]);
   buttons.push([Markup.callbackButton(session.text.buttons.back, 'menu/settings')]);
   return Markup.inlineKeyboard(buttons);
 }

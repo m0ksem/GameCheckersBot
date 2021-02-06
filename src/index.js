@@ -9,6 +9,6 @@ const logger = new Logger(config.botAdmin, telegraf);
 const onError = (error) => {
   if (error.message) logger.error(error.message);
   if (error.stack) logger.error(error.stack);
-}
+};
 
 new Bot(telegraf, onError);

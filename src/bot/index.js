@@ -31,7 +31,7 @@ module.exports = class Bot {
     this.bot.command('save_sessions_to_databases', (ctx) => onSaveToDatabase(ctx, db));
 
     if (onError) {
-      this.bot.catch(onError)
+      this.bot.catch(onError);
     }
   }
 };
