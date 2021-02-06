@@ -3,7 +3,7 @@ const sessionExpiredAction = require('../session-expired');
 const sessionsStorage = require('../../sessions-storage');
 
 function renderWinnerMessage(session) {
-  const header = `${session.winner.name} won this game!`;
+  const header = `${session.winner.name} ${session.text.win}`;
   const footer = '';
   return [header, '', footer].join('\n');
 }

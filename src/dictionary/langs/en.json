@@ -12,7 +12,7 @@
     "somethingWrong": "There are some erorr. Please contact developer.",
     "onlyBlack": "You can move only on black cells.",
     "youCantPlayVsYou": "You cannot play against yourself.",
-    "win": " win!",
+    "win": " has won!",
     "checkerNotPicked": "You need to pick up checker.",
     "waitForYourTurn": "Wait for your turn.",
     "unknownUser": "You cant play this game."

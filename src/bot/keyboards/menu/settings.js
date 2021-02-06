@@ -5,7 +5,7 @@ function renderBeatingRequiredTitle(session) {
   const beatIsRequiredHumanized = session.game.settings.beatIsRequired
     ? session.text.yes : session.text.no;
 
-  return `${session.text.buttons.beatingRequired} ${beatIsRequiredHumanized}`;
+  return `${session.text.buttons.beatingRequired} : ${beatIsRequiredHumanized}`;
 }
 
 module.exports = function startGameMenuKeyboard(session) {
