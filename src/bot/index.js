@@ -8,9 +8,10 @@ const onInlineQueryListener = require('./listeners/on-inline-query');
 const onCallbackQueryListener = require('./listeners/on-callback-query');
 const onExportToJson = require('./listeners/on-export-to-json');
 const onSaveToDatabase = require('./listeners/on-save-to-database');
+const onError = require('./listeners/on-error');
 
 module.exports = class Bot {
-  constructor(telegraf, onError) {
+  constructor(telegraf, onErrorCb) {
     this.bot = telegraf;
 
     const db = new DataBase(config.mongodb.url, config.mongodb.database);
@@ -30,8 +31,10 @@ module.exports = class Bot {
     this.bot.command('export_to_json', onExportToJson);
     this.bot.command('save_sessions_to_databases', (ctx) => onSaveToDatabase(ctx, db));
 
-    if (onError) {
-      this.bot.catch(onError);
-    }
+    this.bot.catch((err, ctx) => {
+      onError(ctx);
+
+      if (onErrorCb) { onErrorCb(err, ctx); }
+    });
   }
 };

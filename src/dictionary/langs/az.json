@@ -9,7 +9,7 @@
   "message": {
     "cantMove": "Sən oraya gedə bilmirsən.",
     "beatRequired": "Siz daşı vurmalısınız.",
-    "smthWrong": "Bəzi səhvlər var. Xahiş edirəm programçı ilə əlaqə saxlayın.",
+    "smthWrong": "Bir səhv baş verdi. Hesabat artıq geliştiriciyə göndərilib.\n\nYeniləmə baş vermiş ola bilər və oyun iclasınız köhnəlmişdir.",
     "olnyBlack": "Yalnız qara xanalarla hərəkət edə bilərsiniz.",
     "youCantPlayVsYou": "Özünüzə qarşı oynaya bilməzsiniz.",
     "win": "Qalib!",

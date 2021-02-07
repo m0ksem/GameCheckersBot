@@ -9,7 +9,7 @@
   "message": {
     "cantMove": "You cant move there.",
     "beatRequired": "You must beat.",
-    "somethingWrong": "There are some erorr. Please contact developer.",
+    "somethingWrong": "An error has occurred. The report has already been sent to the developer.\n\nThere may have been an update so your game session is out of date.",
     "onlyBlack": "You can move only on black cells.",
     "youCantPlayVsYou": "You cannot play against yourself.",
     "win": " has won!",
