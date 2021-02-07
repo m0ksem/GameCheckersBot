@@ -12,13 +12,18 @@
   
   
 <p align="center">
-  <a href="">
-    <img src="https://github.com/m0ksem/GameCheckersBot/workflows/test%20and%20lint/badge.svg" alt="test">
+  <a href="https://github.com/m0ksem/GameCheckersBot/actions?query=workflow%3Atest">
+    <img src="https://github.com/m0ksem/GameCheckersBot/workflows/test/badge.svg?branch=master" alt="test">
+  </a>
+  <a href="https://github.com/m0ksem/GameCheckersBot/actions?query=workflow%3Alint">
+    <img src="https://github.com/m0ksem/GameCheckersBot/workflows/lint/badge.svg?branch=master" alt="lint">
   </a>
 </p>
 
  
-- [How to use bot](https://teletype.in/@m0ksem/kpvQiJAMW)
+[How to use bot](https://teletype.in/@m0ksem/kpvQiJAMW) — guide for users.
+
+#### Developer guide
 - Setup:
   - yarn
   - change src/config/ examples.
