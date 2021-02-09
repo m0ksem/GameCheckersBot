@@ -3,7 +3,7 @@
 let currentConfig = null;
 const env = process.argv[2] || process.env.NODE_ENV || 'development';
 
-console.log(`Running in ${process.env.NODE_ENV} env.`);
+console.log(`Running in ${env} env.`);
 
 if (env === 'production') {
   currentConfig = require('./production');
