@@ -13,7 +13,7 @@
   
 <p align="center">
   <a href="https://github.com/m0ksem/GameCheckersBot/actions?query=workflow%3Atest">
-    <img src="https://github.com/m0ksem/GameCheckersBot/workflows/test/badge.svg?branch=master" alt="test">
+    <img src="https://github.com/m0ksem/GameCheckersBot/workflows/deploy/badge.svg?branch=master" alt="test">
   </a>
   <a href="https://github.com/m0ksem/GameCheckersBot/actions?query=workflow%3Alint">
     <img src="https://github.com/m0ksem/GameCheckersBot/workflows/lint/badge.svg?branch=master" alt="lint">
