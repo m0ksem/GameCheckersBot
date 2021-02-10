@@ -1,0 +1,46 @@
+name: deploy
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm test
+      env:
+        CI: true
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+    - name: executing remote ssh commands using secret key
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.PRIVATE_KEY }}
+        port: ${{ secrets.PORT }}
+        script_stop: true
+        script: |
+          screen -S checker_bot -X at 0 stuff $'\003'
+          cd ~/telegram_bots/${{ github.event.repository.name }}/
+          git pull
+          yarn start
