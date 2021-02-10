@@ -41,6 +41,5 @@ jobs:
         script_stop: true
         script: |
           screen -S checker_bot -X at 0 stuff $'\003'
-          cd ~/telegram_bots/${{ github.event.repository.name }}/
-          git pull
-          yarn start
+          screen -S checker_bot -X at 0 stuff 'git pull\n'
+          screen -S checker_bot -X at 0 stuff 'yarn start\n'
