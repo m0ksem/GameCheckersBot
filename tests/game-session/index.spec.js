@@ -1,8 +1,8 @@
 const GameSession = require('../../src/game-session');
 
 describe('GameSession', () => {
-  describe('checkCurrentPlayer', () => {
-    const method = GameSession.prototype.checkCurrentPlayer;
+  describe('getErrorIfNotCurrentPlayer', () => {
+    const method = GameSession.prototype.getErrorIfNotCurrentPlayer;
 
     function mockThis() {
       return {
@@ -30,7 +30,7 @@ describe('GameSession', () => {
       mock.game.turn.currentPlayer.name = 'Maksim';
 
       const result = method.call(mock, 'Maksim');
-      expect(result).toBe({ result: true, error: null });
+      expect(result).toBe(null);
     });
 
     it('User is current player enemy', () => {
@@ -38,7 +38,7 @@ describe('GameSession', () => {
       mock.game.turn.enemyPlayer.name = 'Maksim';
 
       const result = method.call(mock, 'Maksim');
-      expect(result).toBe({ result: false, error: mock.text.message.waitForYourTurn });
+      expect(result).toBe(mock.text.message.waitForYourTurn);
     });
 
     it('User is unknown', () => {
@@ -46,7 +46,7 @@ describe('GameSession', () => {
       mock.game.turn.currentPlayer.name = 'Denis';
 
       const result = method.call(mock, 'Maksim');
-      expect(result).toBe({ result: false, error: mock.text.message.unknownUser });
+      expect(result).toBe(mock.text.message.unknownUser);
     });
   });
 });

@@ -45,8 +45,8 @@ module.exports = class GameSession {
     return result;
   }
 
-  isNotCurrentPlayer(name) {
-    if (this.game.turn.currentPlayer.name === name) return false;
+  getErrorIfNotCurrentPlayer(name) {
+    if (this.game.turn.currentPlayer.name === name) return null;
 
     if (this.game.turn.enemyPlayer.name === name) { return this.text.message.waitForYourTurn; }
 

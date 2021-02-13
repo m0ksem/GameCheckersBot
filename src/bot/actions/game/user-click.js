@@ -4,6 +4,7 @@ const sessionExpiredAction = require('../session-expired');
 const showWinnerAction = require('./show-winner');
 
 const sessionsStorage = require('../../sessions-storage');
+const username = require('../../../utils/username');
 
 const turnInfoCaption = require('../../captions/game/turn-info');
 const gameTableKeyboard = require('../../keyboards/game/game-table');
@@ -11,6 +12,11 @@ const gameTableKeyboard = require('../../keyboards/game/game-table');
 module.exports = (ctx, cbData) => {
   const session = sessionsStorage.find(ctx.callbackQuery.inline_message_id);
   if (!session) { return sessionExpiredAction(ctx); }
+
+  const checkCurrentPlayerError = session.getErrorIfNotCurrentPlayer(username(ctx));
+  if (checkCurrentPlayerError) {
+    return showMessageAction(ctx, checkCurrentPlayerError);
+  }
 
   const [x, y] = cbData.split('').map((i) => parseInt(i, 10));
 
