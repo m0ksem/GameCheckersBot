@@ -15,12 +15,15 @@ module.exports = class Bot {
     this.bot = telegraf;
 
     const db = new DataBase(config.mongodb.url, config.mongodb.database);
+    this.bot.context.db = db;
     db.connect().then(() => {
       db.getSessions().then((sessions) => {
         sessionStorage.restoreSessions(sessions);
         this.bot.startPolling();
         console.log('Bot started');
       });
+    }).catch((err) => {
+      onErrorCb(err, this.bot.context);
     });
 
     this.bot.on('inline_query', onInlineQueryListener);

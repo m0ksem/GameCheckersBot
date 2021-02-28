@@ -15,6 +15,8 @@ module.exports = (ctx, color) => {
 
   const name = username(ctx);
 
+  ctx.db.updateUser(ctx.from);
+
   if (session.players[color].name === name) return noAction(ctx);
   if (session.players[enemy(color)].name === name && !allowSamePlayer) {
     session.players[enemy(color)].name = undefined;

@@ -7,6 +7,7 @@ class DataBase {
   constructor(clusterUrl, databaseName) {
     this.clusterUrl = clusterUrl;
     this.databaseName = databaseName;
+    this.isConnected = false;
   }
 
   connect() {
@@ -14,10 +15,13 @@ class DataBase {
       .then((client) => {
         this.client = client;
         this.db = client.db(this.databaseName);
+        this.isConnected = true;
       });
   }
 
   updateUser(user) {
+    if (!this.isConnected) return;
+
     this.db.collection('users').collection.findOne({ id: user.id }, (err, foundedUser) => {
       if (foundedUser) {
         return this.db.collection('users')
