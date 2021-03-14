@@ -1,6 +1,6 @@
-const DataBase = require('../database');
-const sessionStorage = require('./sessions-storage');
-const config = require('../config');
+// const DataBase = require('../database');
+// const sessionStorage = require('./sessions-storage');
+// const config = require('../config');
 
 const onStartListener = require('./listeners/on-start');
 const onHelpListener = require('./listeners/on-help');
@@ -14,14 +14,14 @@ module.exports = class Bot {
   constructor(telegraf, onErrorCb) {
     this.bot = telegraf;
 
-    const db = new DataBase(config.mongodb.url, config.mongodb.database);
-    db.connect().then(() => {
-      db.getSessions().then((sessions) => {
-        sessionStorage.restoreSessions(sessions);
-        this.bot.startPolling();
-        console.log('Bot started');
-      });
-    });
+    // const db = new DataBase(config.mongodb.url, config.mongodb.database);
+    // db.connect().then(() => {
+    //   db.getSessions().then((sessions) => {
+    //     sessionStorage.restoreSessions(sessions);
+    this.bot.startPolling();
+    console.log('Bot started');
+    //   });
+    // });
 
     this.bot.on('inline_query', onInlineQueryListener);
     this.bot.on('callback_query', onCallbackQueryListener);
