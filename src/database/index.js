@@ -20,7 +20,6 @@ class DataBase {
   updateUser(user) {
     this.db.collection('users').findOne({ id: user.id }, (err, foundedUser) => {
       if (foundedUser) {
-        console.log(foundedUser.games_count);
         return this.db.collection('users')
           .updateOne(
             { id: foundedUser.id },
