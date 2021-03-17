@@ -2,6 +2,8 @@ const Markup = require('telegraf/markup');
 const dictionary = require('../../dictionary');
 
 module.exports = (ctx) => {
+  ctx.db.updateUser(ctx.from);
+
   const text = dictionary.text(ctx.from.language_code);
 
   const extra = {

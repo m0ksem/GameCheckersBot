@@ -21,3 +21,4 @@ lerna-debug.log*
 .eslintcache
 sessions.json
 dist
+.vscode
