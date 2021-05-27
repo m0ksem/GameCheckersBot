@@ -13,6 +13,7 @@ module.exports = {
     'no-underscore-dangle': 0,
     'no-new': 0,
     'no-console': 0,
+    'import/extensions': 0,
   },
 
   plugins: ['jest'],
