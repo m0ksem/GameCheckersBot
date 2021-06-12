@@ -7,14 +7,21 @@ function isGameSessionReadyToPlay(session) {
 
 module.exports = function startGameMenuKeyboard(session) {
   const buttonsText = session.text.buttons;
+  const icons = session.game.symbols;
 
   const whiteName = session.players.white.name || buttonsText.playAsWhite;
   const blackName = session.players.black.name || buttonsText.playAsBlack;
 
   const buttons = [
     [
-      Markup.callbackButton(whiteName, action('menu/select-color', 'white')),
-      Markup.callbackButton(blackName, action('menu/select-color', 'black')),
+      Markup.callbackButton(
+        `${whiteName} ${icons.whiteChecker}${icons.whiteKing}`,
+        action('menu/select-color', 'white'),
+      ),
+      Markup.callbackButton(
+        `${blackName} ${icons.blackChecker}${icons.blackKing}`,
+        action('menu/select-color', 'black'),
+      ),
     ],
     [Markup.callbackButton(buttonsText.settings, action('menu/settings'))],
   ];
