@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "eslint-config-airbnb-base": "^14.2.1",
-    "jest": "^27.0.4",
+    "jest": "^27.0.6",
     "mongodb": "^3.6.10",
     "telegraf": "^3.38.0",
     "telegram-bot-action-handlers": "git+https://github.com/m0ksem/telegram-bot-action-handlers.git#0.1"
