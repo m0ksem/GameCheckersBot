@@ -7,7 +7,7 @@
     "test": "jest",
     "dev": "node ./src/index.js",
     "daemon": "yarn daemon:run",
-    "daemon:run": "pm2 start ./src/index.js --name game-checkers-bot --log './logs/current.log'",
+    "daemon:run": "NODE_ENV=production pm2 start ./src/index.js --name game-checkers-bot --log './logs/current.log'",
 
     "daemon:stop": "yarn pm2 stop game-checkers-bot",
     "start": "node ./src/index.js production",
