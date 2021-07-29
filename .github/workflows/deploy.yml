@@ -40,6 +40,7 @@ jobs:
         port: ${{ secrets.PORT }}
         script_stop: true
         script: |
-          screen -S checker_bot -X at 0 stuff $'\003'
-          screen -S checker_bot -X at 0 stuff 'git pull\n'
-          screen -S checker_bot -X at 0 stuff 'yarn start\n'
+          cd ~/telegram_bots/GameCheckersBot/
+          yarn daemon:stop
+          git fetch --all && git reset --hard origin/master
+          yarn daemon:run
