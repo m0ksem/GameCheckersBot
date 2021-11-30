@@ -16,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "eslint-config-airbnb-base": "^15.0.0",
-    "jest": "^27.3.1",
+    "jest": "^27.4.0",
     "mongodb": "^4.2.0",
     "pm2": "^5.1.2",
     "telegraf": "^3.39.0",
