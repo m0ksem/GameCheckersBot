@@ -24,9 +24,7 @@ class Game extends CheckersGameBase {
   isPickedCheckerWhichNeedToBeat(needToBeatCheckers) {
     if (needToBeatCheckers.length === 0) return false;
 
-    return !coordinates.isArrayIncludesCoords(
-      needToBeatCheckers, this.hands.pickedChecker,
-    );
+    return !coordinates.isArrayIncludesCoords(needToBeatCheckers, this.hands.pickedChecker);
   }
 
   pickChecker(x, y) {
