@@ -1,0 +1,54 @@
+{
+  "langName": "Türkçe",
+  "langCode": "tr",
+  "Turn": "Sıra",
+  "White": "Beyaz",
+  "Black": "Siyah",
+  "yes": "evet",
+  "no": "hayır",
+  "message": {
+    "cantMove": "Oraya oynayamazsınız.",
+    "beatRequired": "Yemek zorundasınız.",
+    "somethingWrong": "Bir hata oldu. Rapor geliştiriciye gönderildi.\n\nBir güncelleme yapılmış olabilir, bu nedenle oturumunuz güncel değil.",
+    "onlyBlack": "Sadece siyah karelerde hareket edebilirsiniz.",
+    "youCantPlayVsYou": "Kendinize karşı oynayamazsınız.",
+    "win": "Galip!",
+    "checkerNotPicked": "Dama almanız gerekiyor.",
+    "waitForYourTurn": "Sıranızı bekleyin",
+    "unknownUser": "Bu oyunu oynayamazsınız."
+  },
+  "buttons": {
+    "clickToStart": "Oyuna başlamak için tıklayın!",
+    "play": "Oyna!",
+    "settings": "Ayarlar",
+    "playAsWhite": "Beyaz olarak oyna",
+    "playAsBlack": "Siyah olarak oyna",
+    "switchLang": "Dili değiştir",
+    "back": "Geri",
+    "changeSkin": "Oyun kostümünü değiştir",
+    "visitTelegramChannel": "Telegram kanalı",
+    "sendNewTable": "Yeni oyun kur",
+    "sendNewTableToChat": "Sohbete oyun daveti gönder",
+    "beatingRequired": "Yemek zorunlu",
+    "donate": "Bağış",
+    "addOwnLanguage": "Kendi dilini ekle"
+  },
+  "captions": {
+    "sendTable": "Oyun daveti gönder",
+    "sendTableDescription": "Bu sohbete oyun daveti gönderilecek",
+    "waitingForLastPlayer": "Rakip bekleniyor",
+    "menu": "Renkleri seçin ve oynamaya  başlayın",
+    "settings": "Dili değiştirebilirsiniz",
+    "yourGameIsReady": "Oyun kuruldu! Tercüme:Mafyatik",
+    "yourGameIsEnded": "Bu oyunun oturumu mevcut değil.\n\nBüyük olasılıkla bot güncellendi. \nYa da bir hata meydana geldi. Eğer bot birkaç dakika boyunca çalışmazsa https://t.me/m0ksembotschat adresine rapor yazın.,
+    "selectSkin": "Oyun için kostüm seçin.",
+    "selectLanguage": "Oyun için dil seçin.",
+    "moreLater": "Daha sonra!",
+    "startText": "Oyunu başlatmak için herhangi bir sohbete @GameCheckersBot yazın.\n\nBotun nasıl çalıştığı hakkında daha fazla bilgi edinmek için: https://teletype.in/@m0ksem/kpvQiJAMW"
+  },
+  "skins": {
+    "moons": "Aylar - Varsayılan kostüm",
+    "sweets": "Tatlılar",
+    "animals": "Hayvanlar"
+  }
+}
