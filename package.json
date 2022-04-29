@@ -8,7 +8,7 @@
     "dev": "node ./src/index.js",
     "daemon": "yarn daemon:run",
     "daemon:run": "NODE_ENV=production pm2 start ./src/index.js --name game-checkers-bot --log './logs/current.log'",
-    "daemon:stop": "yarn pm2 stop game-checkers-bot",
+    "daemon:stop": "yarn pm2 stop game-checkers-bot 2> /dev/null",
     "start": "node ./src/index.js production",
     "lint": "eslint --ext .js, ./src/"
   },
