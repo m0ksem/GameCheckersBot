@@ -12,8 +12,8 @@
   
   
 <p align="center">
-  <a href="https://github.com/m0ksem/GameCheckersBot/actions?query=workflow%3Atest">
-    <img src="https://github.com/m0ksem/GameCheckersBot/workflows/deploy/badge.svg?branch=master" alt="test">
+  <a href="https://github.com/m0ksem/GameCheckersBot/actions?query=workflow%3Adeploy">
+    <img src="https://github.com/m0ksem/GameCheckersBot/actions/workflows/deploy.yml/badge.svg" alt="test">
   </a>
   <a href="https://github.com/m0ksem/GameCheckersBot/actions?query=workflow%3Alint">
     <img src="https://github.com/m0ksem/GameCheckersBot/workflows/lint/badge.svg?branch=master" alt="lint">
@@ -26,7 +26,7 @@
 #### Developer guide
 - Setup:
   - yarn
-  - change src/config/ examples.
+  - change .env.example.
   - `yarn start` for production (or `yarn dev` for development)
 _____
 
