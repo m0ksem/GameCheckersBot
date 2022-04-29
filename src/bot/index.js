@@ -26,6 +26,9 @@ module.exports = class Bot {
       });
 
       this.bot.context.db = db;
+    } else {
+      console.log('Bot started (Without database)');
+      this.bot.startPolling();
     }
 
     this.bot.on('inline_query', onInlineQueryListener);
@@ -41,7 +44,5 @@ module.exports = class Bot {
 
       if (onErrorCb) { onErrorCb(err, ctx); }
     });
-
-    this.bot.launch();
   }
 };
