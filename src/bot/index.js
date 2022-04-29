@@ -13,6 +13,7 @@ const onError = require('./listeners/on-error');
 module.exports = class Bot {
   constructor(telegraf, onErrorCb) {
     this.bot = telegraf;
+    this.config = config;
 
     if (config.mongodb.database) {
       const db = new DataBase(config.mongodb.url, config.mongodb.database);

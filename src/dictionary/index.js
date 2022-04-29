@@ -1,11 +1,8 @@
 const fs = require('fs');
+const path = require('path');
 const mergeDeep = require('../utils/object-merge');
 
 const DEFAULT_LANGUAGE_CODE = 'en';
-
-function normalizePath(path) {
-  return `${__dirname}/${path}`;
-}
 
 function readLangs(folder, defaultLangCode) {
   const filePaths = fs.readdirSync(folder);
@@ -24,7 +21,7 @@ function readLangs(folder, defaultLangCode) {
 }
 
 module.exports = {
-  langs: readLangs(normalizePath('./langs'), DEFAULT_LANGUAGE_CODE),
+  langs: readLangs(path.resolve(process.cwd(), './src/dictionary/langs'), DEFAULT_LANGUAGE_CODE),
 
   text(languageCode) {
     if (!Object.keys(this.langs).includes(languageCode)) {

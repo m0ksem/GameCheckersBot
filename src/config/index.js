@@ -13,5 +13,5 @@ module.exports = {
     database: process.env.MONGO_DB_DATABASE,
   },
   // Use this in development mode for testing
-  allowSamePlayer: process.env.BOT_ALLOW_SAME_PLAYER,
+  allowSamePlayer: JSON.parse(process.env.BOT_ALLOW_SAME_PLAYER || 'false'),
 };

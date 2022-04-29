@@ -12,4 +12,6 @@ const onError = (error) => {
   if (config.env === 'development') { console.error(error); }
 };
 
-new Bot(telegraf, onError);
+const bot = new Bot(telegraf, onError);
+
+module.exports = bot;
