@@ -22,3 +22,5 @@ lerna-debug.log*
 sessions.json
 dist
 .vscode
+
+.env

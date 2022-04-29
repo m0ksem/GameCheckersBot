@@ -15,6 +15,7 @@
   "author": "m0ksem <m0ksem1337@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "jest": "^28.0.2",
     "mongodb": "^4.5.0",

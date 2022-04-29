@@ -14,16 +14,18 @@ module.exports = class Bot {
   constructor(telegraf, onErrorCb) {
     this.bot = telegraf;
 
-    const db = new DataBase(config.mongodb.url, config.mongodb.database);
-    db.connect().then(() => {
-      db.getSessions().then((sessions) => {
-        sessionStorage.restoreSessions(sessions);
-        this.bot.startPolling();
-        console.log('Bot started');
+    if (config.mongodb.database) {
+      const db = new DataBase(config.mongodb.url, config.mongodb.database);
+      db.connect().then(() => {
+        db.getSessions().then((sessions) => {
+          sessionStorage.restoreSessions(sessions);
+          this.bot.startPolling();
+          console.log('Bot started');
+        });
       });
-    });
 
-    this.bot.context.db = db;
+      this.bot.context.db = db;
+    }
 
     this.bot.on('inline_query', onInlineQueryListener);
     this.bot.on('callback_query', onCallbackQueryListener);
@@ -31,12 +33,14 @@ module.exports = class Bot {
     this.bot.command('start', onStartListener);
     this.bot.command('help', onHelpListener);
     this.bot.command('export_to_json', onExportToJson);
-    this.bot.command('save_sessions_to_databases', (ctx) => onSaveToDatabase(ctx, db));
+    this.bot.command('save_sessions_to_databases', (ctx) => onSaveToDatabase(ctx, ctx.db));
 
     this.bot.catch((err, ctx) => {
       onError(ctx);
 
       if (onErrorCb) { onErrorCb(err, ctx); }
     });
+
+    this.bot.launch();
   }
 };
