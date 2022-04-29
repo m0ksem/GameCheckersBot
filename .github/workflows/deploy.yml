@@ -1,6 +1,9 @@
 name: deploy
 
 on: 
+  workflow_dispatch:
+    inputs:
+      isManual: true
   release:
     types: [published]
   push:
