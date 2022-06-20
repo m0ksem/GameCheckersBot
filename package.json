@@ -24,7 +24,7 @@
     "telegram-bot-action-handlers": "git+https://github.com/m0ksem/telegram-bot-action-handlers.git#0.1"
   },
   "devDependencies": {
-    "eslint": "^8.15.0",
+    "eslint": "^8.18.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^26.4.6"
   }
