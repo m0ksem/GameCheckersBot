@@ -1,20 +1,37 @@
 module.exports = {
-  root: true,
-
-  env: {
-    node: true,
-    commonjs: true,
-    'jest/globals': true,
+  'env': {
+    'node': true,
+    'es2021': true,
   },
-
-  extends: ['eslint:recommended', 'plugin:jest/recommended', 'airbnb-base'],
-
-  rules: {
-    'no-underscore-dangle': 0,
-    'no-new': 0,
-    'no-console': 0,
-    'import/extensions': 0,
+  'extends': [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended'
+  ],
+  'parser': '@typescript-eslint/parser',
+  'parserOptions': {
+    'ecmaVersion': 'latest',
+    'sourceType': 'module'
   },
-
-  plugins: ['jest'],
-};
+  'plugins': [
+    '@typescript-eslint'
+  ],
+  'ignorePatterns': ['dist/**/*', '.eslintrc.js'],
+  'rules': {
+    'indent': [
+      'error',
+      2
+    ],
+    'linebreak-style': [
+      'error',
+      'unix'
+    ],
+    'quotes': [
+      'error',
+      'single'
+    ],
+    'semi': [
+      'error',
+      'never'
+    ]
+  },
+}

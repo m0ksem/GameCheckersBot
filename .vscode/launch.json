@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug",
+      "program": "${workspaceFolder}/src/index.ts",
+      "runtimeArgs": [
+        "-r",
+        "esbuild-runner/register"
+      ],
+      "request": "launch",
+      "sourceMaps": true,
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "pwa-node"
+    }
+  ]
+}

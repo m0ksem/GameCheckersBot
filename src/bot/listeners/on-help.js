@@ -1,1 +1,0 @@
-module.exports = (ctx) => ctx.reply('If you want start to play type @GameCheckersBot in chat and select "send table" option.\n\nLearn how inline bots woriking: https://core.telegram.org/bots/inline');

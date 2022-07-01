@@ -13,14 +13,18 @@ jobs:
     steps:
     - name: executing remote ssh commands using secret key
       uses: appleboy/ssh-action@master
+      env:
+        DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+        DEPLOY_BRANCH:  ${{ secrets.DEPLOY_BRANCH }}
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.PRIVATE_KEY }}
         port: ${{ secrets.PORT }}
         script_stop: true
+        envs: DEPLOY_PATH,DEPLOY_BRANCH
         script: |
-          cd ~/telegram_bots/GameCheckersBot/
+          cd $DEPLOY_PATH
           yarn daemon:stop
-          git fetch --all && git reset --hard origin/master
-          yarn daemon:run
+          git fetch --all && git reset --hard origin/$DEPLOY_BRANCH
+          yarn daemon:start
