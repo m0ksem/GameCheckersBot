@@ -1,11 +1,11 @@
 class Player {
   name?: string
   checkersCount: number
-  checkerSymbol: string
-  kingSymbol: string
+  checkerSymbol: number
+  kingSymbol: number
   direction: -1 | 1
 
-  constructor(checkerSymbol: string, kingSymbol: string, direction: -1 | 1) {
+  constructor(checkerSymbol: number, kingSymbol: number, direction: -1 | 1) {
     this.name = undefined
     this.checkersCount = 12
     this.checkerSymbol = checkerSymbol
@@ -13,15 +13,15 @@ class Player {
     this.direction = direction
   }
 
-  isPlayerChecker(symbol: string) {
+  isPlayerChecker(symbol: number) {
     return symbol === this.checkerSymbol || symbol === this.kingSymbol
   }
 
-  isPlayerSimpleChecker(symbol:  string) {
+  isPlayerSimpleChecker(symbol:  number) {
     return symbol === this.checkerSymbol
   }
 
-  isPlayerKing(symbol: string) {
+  isPlayerKing(symbol: number) {
     return symbol === this.kingSymbol
   }
 }
