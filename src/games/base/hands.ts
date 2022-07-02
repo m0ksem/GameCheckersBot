@@ -1,4 +1,4 @@
-import { Coordinate } from '../base/math/coordinates';
+import { Coordinate } from './math/coordinates';
 type PickedChecker = {
   position: Coordinate,
   symbol: number,
