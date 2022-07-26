@@ -4095,17 +4095,17 @@ systeminformation@^5.7:
   resolved "https://registry.yarnpkg.com/systeminformation/-/systeminformation-5.7.13.tgz#372f7a2f87e7f16fe14544027f0cb108a6a700e9"
   integrity sha512-yGzRLLdZ4xR37+3WM89rFG1zEQ10BqefeCv0YUfXp26bZGPoZtGQt/IEtIa40i1VmGBMGFTQCVClZ7/optxtvw==
 
-telegraf@^3.39.0:
-  version "3.39.0"
-  resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-3.39.0.tgz#32a7ed464c80802fe3177619d2a9c53413487850"
-  integrity sha512-6u5UyW2KpMS/hwC4DKLGlicK/rVSYCahPFgF14ioP6BzwcDwQlciHCB/oWguvxLJaYGrvY6crzLHfjupFTBPXw==
+telegraf@^3.40.0:
+  version "3.40.0"
+  resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-3.40.0.tgz#2234eaf7850b0767b2975976e4d264fe421d8c03"
+  integrity sha512-wulVjRHrX2zQwbk1/jzg3Ll9Kr0xC7ofXsRPJgcV2yoCFx5oSU41ZaDKNRPsLhjXxW4s9iNM2S2N/ESyiZxTMQ==
   dependencies:
     debug "^4.0.1"
     minimist "^1.2.0"
     module-alias "^2.2.2"
     node-fetch "^2.2.0"
     sandwich-stream "^2.0.1"
-    typegram "^3.1.5"
+    typegram "^3.10.0"
 
 "telegram-bot-action-handlers@git+https://github.com/m0ksem/telegram-bot-action-handlers.git#0.1":
   version "0.0.1"
@@ -4245,10 +4245,10 @@ type-fest@^0.8.1:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
 
-typegram@^3.1.5:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/typegram/-/typegram-3.4.1.tgz#078fdfb148f9a75bbbbd764a2307c9819d9eaf2f"
-  integrity sha512-O3HT/D46tsiIX1Y83gGF6sFoJiEITcqM5S8l8Iz9eyjDvarXFzUQ4mNoHZHoJ1JXlokB17GJk/vOT7Nx+TcpNA==
+typegram@^3.10.0:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/typegram/-/typegram-3.10.0.tgz#8f02c2a7748f019f0566279318d2be396d103bd8"
+  integrity sha512-kma7ZF7SFRqcUCgo5sHg1MbPwc9/KYjVkbvrqIZK7oXfPdLBGz1s7wF9d7o4yjHp+AOGke8cyYGhI/+4xYYC4Q==
 
 unbox-primitive@^1.0.1:
   version "1.0.1"
