@@ -7,6 +7,7 @@ const telegraf = new Telegraf(config.token);
 const logger = new Logger(config.botAdmin, telegraf);
 
 const onError = (error) => {
+  if (!logger) { return console.error(error); }
   if (error.message) logger.error(error.message);
   if (error.stack) logger.error(error.stack);
   if (config.env === 'development') { console.error(error); }
@@ -18,3 +19,7 @@ try {
 } catch (e) {
   onError(e);
 }
+
+process.on('uncaughtException', error => {
+  onError(error) 
+})
