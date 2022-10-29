@@ -11,12 +11,12 @@ export const areCoordinatesEqual = (coords1: Coordinate, coords2: Coordinate) =>
 
 export const isArrayIncludesCoords = (array: Coordinate[], coords: Coordinate) => {
   for (let i = 0; i < array.length; i += 1) {
-    const arrayCoords = array[i];
-    if (areCoordinatesEqual(arrayCoords, coords)) { return true; }
+    const arrayCoords = array[i]
+    if (areCoordinatesEqual(arrayCoords, coords)) { return true }
   }
-  return false;
+  return false
 }
 
 export const getNumberSign = (number: number) => {
-  return Math.abs(number) / number;
+  return Math.abs(number) / number
 }

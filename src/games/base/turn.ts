@@ -1,7 +1,7 @@
 export class Turn {
   players: Player[] = []
   
-  private currentPlayerIndex: number = 0
+  private currentPlayerIndex = 0
 
   get currentPlayer() { return this.players[this.currentPlayerIndex] }
   get enemyPlayer() { return this.players.filter((p, i) => i !== this.currentPlayerIndex)[0] }

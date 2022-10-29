@@ -1,5 +1,5 @@
 import { isDiagonal, Coordinate, coordinatesBetween, getNumberSign } from '../base/math'
-import { Game } from "../base/game"
+import { Game } from '../base/game'
 
 const NOTHING = -1
 const WHITE_CELL = 0
@@ -63,8 +63,8 @@ export class CheckersGame extends Game {
   
     let enemyPosition: Coordinate | null = null
     for (let i = 1; i <= range; i += 1) {
-      const x = from.x + i * xDirection;
-      const y = from.y + i * yDirection;
+      const x = from.x + i * xDirection
+      const y = from.y + i * yDirection
       if (this.turn.enemyPlayer.isPlayerChecker(this.table.getCell({ x, y }) || NOTHING) && !enemyPosition) {
         enemyPosition = { x, y }
       } else if (this.table.getCell({ x, y }) !== BLACK_CELL) {
@@ -128,8 +128,8 @@ export class CheckersGame extends Game {
   }
 
   doSimpleCheckerNeedsToBeKing(coord: Coordinate) {
-    const endForPlayer = this.turn.currentPlayer.direction === 1 ? 7 : 0;
-    return endForPlayer === coord.y;
+    const endForPlayer = this.turn.currentPlayer.direction === 1 ? 7 : 0
+    return endForPlayer === coord.y
   }
 
   doSimpleCheckerNeedToBeat(coord: Coordinate) {
@@ -144,16 +144,16 @@ export class CheckersGame extends Game {
   doKingNeedToBeat(coord: Coordinate) {
     for (let yDirection = -1; yDirection <= 1; yDirection += 2) {
       for (let xDirection = -1; xDirection <= 1; xDirection += 2) {
-        const notBlackCell = this.table.findDirection(coord, { x: xDirection, y: yDirection }, ({ cell }) => cell !== BLACK_CELL);
+        const notBlackCell = this.table.findDirection(coord, { x: xDirection, y: yDirection }, ({ cell }) => cell !== BLACK_CELL)
         if (!notBlackCell) { continue }
 
-        const isFirstNonBlackCellIsEnemy = this.turn.enemyPlayer.isPlayerChecker(notBlackCell.cell);
-        const isCellBehindEnemyIsClear = this.table.getCell({ x: coord.x + xDirection, y: coord.y + yDirection}) === WHITE_CELL;
+        const isFirstNonBlackCellIsEnemy = this.turn.enemyPlayer.isPlayerChecker(notBlackCell.cell)
+        const isCellBehindEnemyIsClear = this.table.getCell({ x: coord.x + xDirection, y: coord.y + yDirection}) === WHITE_CELL
 
-        if (isFirstNonBlackCellIsEnemy && isCellBehindEnemyIsClear) return true;
+        if (isFirstNonBlackCellIsEnemy && isCellBehindEnemyIsClear) return true
       }
     }
-    return false;
+    return false
   }
 
   doNeedToBeat(coord: Coordinate) {
